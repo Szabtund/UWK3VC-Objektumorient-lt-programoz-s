@@ -1,14 +1,14 @@
 class JegyFoglalas:
     def __init__(self,utasnev,jarat,datum):
-        self.utasnev = utasnev
-        self.jarat = jarat
-        self.datum = datum
+        self._utasnev = utasnev
+        self._jarat = jarat
+        self._datum = datum
     def get_utasnev(self):
-        return self.utasnev
+        return self._utasnev
     def get_jarat(self):
-        return self.jarat
+        return self._jarat
     def get_datum(self):
-        return self.datum
+        return self._datum
 
     def __str__(self):
         return (
