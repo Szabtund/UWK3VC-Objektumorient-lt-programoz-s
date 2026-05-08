@@ -2,7 +2,7 @@
 
 # Repülőjegy Foglalási Rendszer
 
-Ez a projekt egy egyszerű Python alapú repülőjegy foglalási rendszer.
+Ez a projekt egy Python alapú repülőjegy foglalási rendszer.
 
 Funkciók:
 - Jegy foglalása
