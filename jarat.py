@@ -1,16 +1,28 @@
-# This is a sample Python script.
+from abc import ABC
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Jarat(ABC):
+    def __init__(self,jaratszam,celallomas,jegyar):
+        self.jaratszam = jaratszam
+        self.celallomas = celallomas
+        self.jegyar = jegyar
 
+    def get_jaratszam(self):
+        return self.jaratszam
+    def get_celallomas(self):
+        return self.celallomas
+    def get_jegyar(self):
+        return self.jegyar
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+    def set_jegyar(self,ujar):
+        if ujar > 0:
+            self.jegyar = ujar
+        else:
+            raise ValueError("A jegyár nem lehet negatív!")
 
+class Belfoldijarat(Jarat):
+    def __init__(self,jaratszam,celallomas,jegyar):
+        super().__init__(jaratszam,celallomas,jegyar)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Nemzetkozijarat(Jarat):
+    def __init__(self,jaratszam,celallomas,jegyar):
+        super().__init__(jaratszam, celallomas, jegyar)
